@@ -1,52 +1,113 @@
 <!DOCTYPE html>
-<html>
+<html lang="uz">
 <head>
-    <title>BUNYOD Market</title>
     <meta charset="UTF-8">
+    <title>BUNYOD Market PRO</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
-            font-family: Arial;
-            background: #f5f5f5;
-            text-align: center;
-        }
-        .product {
-            background: white;
-            padding: 20px;
-            margin: 20px;
-            border-radius: 15px;
-            display: inline-block;
-            width: 200px;
-        }
-        button {
-            background: green;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #0f172a;
             color: white;
+        }
+
+        header {
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            padding: 20px;
+            text-align: center;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: #1e293b;
+            width: 220px;
+            border-radius: 15px;
+            padding: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .price {
+            color: #22c55e;
+            font-weight: bold;
+        }
+
+        button {
+            width: 100%;
             padding: 10px;
             border: none;
             border-radius: 10px;
+            background: #22c55e;
+            color: black;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: #16a34a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
         }
     </style>
 </head>
+
 <body>
 
-<h1>BUNYOD Market 🛒</h1>
+<header>
+    🛒 BUNYOD MARKET PRO
+</header>
 
-<div class="product">
-    <h3>Naushnik</h3>
-    <p>100 000 so‘m</p>
-    <button>Sotib olish</button>
+<div class="container">
+
+    <div class="card">
+        <h3>🎧 Naushnik</h3>
+        <p class="price">100 000 so‘m</p>
+        <button onclick="buy('Naushnik')">Sotib olish</button>
+    </div>
+
+    <div class="card">
+        <h3>📱 Telefon</h3>
+        <p class="price">2 000 000 so‘m</p>
+        <button onclick="buy('Telefon')">Sotib olish</button>
+    </div>
+
+    <div class="card">
+        <h3>⌨️ Klaviatura</h3>
+        <p class="price">150 000 so‘m</p>
+        <button onclick="buy('Klaviatura')">Sotib olish</button>
+    </div>
+
 </div>
 
-<div class="product">
-    <h3>Telefon</h3>
-    <p>2 000 000 so‘m</p>
-    <button>Sotib olish</button>
-</div>
+<footer>
+    © 2026 BUNYOD Market | PRO Version
+</footer>
 
-<div class="product">
-    <h3>Klaviatura</h3>
-    <p>150 000 so‘m</p>
-    <button>Sotib olish</button>
-</div>
+<script>
+    function buy(product) {
+        alert(product + " tanlandi! Tez orada buyurtma tizimi ulanadi 🔥");
+    }
+</script>
 
 </body>
 </html>
