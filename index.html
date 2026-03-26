@@ -1,112 +1,143 @@
 <!DOCTYPE html>
 <html lang="uz">
 <head>
-    <meta charset="UTF-8">
-    <title>BUNYOD Market PRO</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>For Madina 💖</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: white;
-        }
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+        background: linear-gradient(135deg, #ff4d6d, #ffb3c1, #ffd6e0);
+        overflow: hidden;
+        text-align: center;
+        color: white;
+    }
 
-        header {
-            background: linear-gradient(90deg, #22c55e, #16a34a);
-            padding: 20px;
-            text-align: center;
-            font-size: 24px;
-            font-weight: bold;
-        }
+    .center {
+        margin-top: 120px;
+    }
 
-        .container {
-            padding: 20px;
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-        }
+    h1 {
+        font-size: 50px;
+        animation: fadeIn 2s ease-in-out;
+    }
 
-        .card {
-            background: #1e293b;
-            width: 220px;
-            border-radius: 15px;
-            padding: 15px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
-            transition: 0.3s;
-        }
+    button {
+        margin-top: 20px;
+        padding: 15px 25px;
+        border: none;
+        border-radius: 30px;
+        font-size: 18px;
+        cursor: pointer;
+        background: white;
+        color: #ff4d6d;
+        font-weight: bold;
+        transition: 0.3s;
+    }
 
-        .card:hover {
-            transform: scale(1.05);
-        }
+    button:hover {
+        transform: scale(1.1);
+        background: #ffe0e6;
+    }
 
-        .price {
-            color: #22c55e;
-            font-weight: bold;
-        }
+    .hidden {
+        display: none;
+        margin-top: 30px;
+        animation: fadeIn 2s ease-in-out;
+    }
 
-        button {
-            width: 100%;
-            padding: 10px;
-            border: none;
-            border-radius: 10px;
-            background: #22c55e;
-            color: black;
-            font-weight: bold;
-            cursor: pointer;
-            margin-top: 10px;
-        }
+    .love-text {
+        font-size: 18px;
+        max-width: 600px;
+        margin: auto;
+        line-height: 1.6;
+    }
 
-        button:hover {
-            background: #16a34a;
-        }
+    .languages {
+        margin-top: 20px;
+        font-size: 20px;
+        animation: glow 2s infinite;
+    }
 
-        footer {
-            text-align: center;
-            padding: 20px;
-            color: #94a3b8;
-        }
-    </style>
+    /* Animatsiya */
+    @keyframes fadeIn {
+        from {opacity: 0;}
+        to {opacity: 1;}
+    }
+
+    @keyframes glow {
+        0% { text-shadow: 0 0 5px white; }
+        50% { text-shadow: 0 0 20px #fff; }
+        100% { text-shadow: 0 0 5px white; }
+    }
+
+    /* Yuraklar */
+    .heart {
+        position: absolute;
+        color: red;
+        animation: fall 6s linear infinite;
+        font-size: 20px;
+    }
+
+    @keyframes fall {
+        0% {transform: translateY(-10%); opacity: 1;}
+        100% {transform: translateY(110vh); opacity: 0;}
+    }
+</style>
+
 </head>
 
 <body>
 
-<header>
-    🛒 BUNYOD MARKET PRO
-</header>
+<div class="center">
+    <h1>Salom Madina 💖</h1>
 
-<div class="container">
+    <p>bu siz uchun marhamat 👇</p>
 
-    <div class="card">
-        <h3>🎧 Naushnik</h3>
-        <p class="price">100 000 so‘m</p>
-        <button onclick="buy('Naushnik')">Sotib olish</button>
+    <button onclick="showLove()">Ochish 💌</button>
+
+    <div id="love" class="hidden">
+
+        <div class="love-text">
+            <p>🌹 Hayotimda borligingiz uchun minnatdorman</p>
+            <p>🌹 Siz menga kuch va ilhom berasan</p>
+            <p>🌹 Siz bilan har kun chiroyliroq</p>
+            <p>🌹 Tabassumingiz eng katta baxtim</p>
+            <p>🌹 Siz bo‘lmasangiz dunyo bo‘shdek</p>
+            <p>🌹 Har doim sog‘ bo‘lishingizni xohlayman</p>
+            <p>🌹 Siz mening eng yaxshi insonimsan</p>
+            <p>🌹 Siz meni borligingiz uchun rahmat</p>
+        </div>
+
+        <div class="languages">
+            ❤️ I love you | Je t’aime | Te amo | Ich liebe dich | Seni sevaman ❤️
+        </div>
+
     </div>
-
-    <div class="card">
-        <h3>📱 Telefon</h3>
-        <p class="price">2 000 000 so‘m</p>
-        <button onclick="buy('Telefon')">Sotib olish</button>
-    </div>
-
-    <div class="card">
-        <h3>⌨️ Klaviatura</h3>
-        <p class="price">150 000 so‘m</p>
-        <button onclick="buy('Klaviatura')">Sotib olish</button>
-    </div>
-
 </div>
 
-<footer>
-    © 2026 BUNYOD Market | PRO Version
-</footer>
-
 <script>
-    function buy(product) {
-        alert(product + " tanlandi! Tez orada buyurtma tizimi ulanadi 🔥");
+    function showLove() {
+        document.getElementById("love").style.display = "block";
     }
+
+    // Yuraklar yaratish
+    function createHeart() {
+        const heart = document.createElement("div");
+        heart.classList.add("heart");
+        heart.innerHTML = "❤️";
+        heart.style.left = Math.random() * 100 + "vw";
+        heart.style.animationDuration = (3 + Math.random() * 5) + "s";
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+            heart.remove();
+        }, 6000);
+    }
+
+    setInterval(createHeart, 300);
 </script>
 
 </body>
